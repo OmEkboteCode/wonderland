@@ -48,6 +48,12 @@ ex: num.toLocalString("en-US")
 
 - POST /listings
 
+## Update: Edit & Update Route
+
+- GET /listings/:id/edit  edit form submit
+
+- PUT /listings/:id
+
 ## Add-on Concepts
 
 - The JavaScript ternary operator (also called the conditional operator) is a concise, three-part shorthand used to write simple if...else statements. It evaluates a condition and returns one value if that condition is true, and another if it is false.
