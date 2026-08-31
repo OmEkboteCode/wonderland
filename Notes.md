@@ -23,6 +23,23 @@ Places(apartment, flat, house, villa, hotel)
 - country String
 
 
+## Initialize Database
+
+- init
+
+- data.js and index.js
+
+
+## Index Route
+
+- GET /listings  all listings
+
+
+
+
+
+
+
 ## Add-on Concepts
 
 - The JavaScript ternary operator (also called the conditional operator) is a concise, three-part shorthand used to write simple if...else statements. It evaluates a condition and returns one value if that condition is true, and another if it is false.
