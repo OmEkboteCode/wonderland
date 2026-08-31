@@ -20,6 +20,7 @@ async function main() {
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({ exotended: true }));
 
 app.get("/", (req, res) => {
   res.send("Working");
@@ -32,18 +33,13 @@ app.get("/listings", async (req, res) => {
   res.render("listings/index.ejs", { allListings });
 });
 
-// app.get("/testlisting", async (req, res) => {
-//   let sampleListing = new Listing({
-//     title: "My New Villa",
-//     description: "By the beach",
-//     price: 15000,
-//     location: "Bay Area, San Fransisco",
-//     country: "USA",
-//   });
-//   await sampleListing.save();
-//   console.log("Sample Was Saved");
-//   res.send("Successful Testing");
-// });
+// Show Route
+
+app.get("/listings/:id", async (req, res) => {
+  let { id } = req.params;
+  const listing = await Listing.findById(id);
+  res.render("listings/show.ejs", { listing });
+});
 
 app.listen(8080, () => {
   console.log("Server is listening to port 8080");

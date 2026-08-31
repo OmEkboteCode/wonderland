@@ -34,11 +34,19 @@ Places(apartment, flat, house, villa, hotel)
 
 - GET /listings  all listings
 
+## Show Route
 
+- GET /listings/:id
 
+- toLocalString: converts any number into string format with commas
 
+ex: num.toLocalString("en-US")
 
+## Create: New & Create Route
 
+- GET /listings/new  Form submit
+
+- POST /listings
 
 ## Add-on Concepts
 
