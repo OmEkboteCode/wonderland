@@ -60,6 +60,22 @@ ex: num.toLocalString("en-US")
 - DELETE /listing/:id
 
 
+## Creating Boilerplate
+
+- What is EJS Mate
+
+- npm i ejs-mate
+- const ejsMate = require("ejs-mate");
+- app.engine('ejs', ejsMate);
+
+- Create a single boilerplate for all page
+
+- <% layout("/layouts/boilerplate") %>
+- <div class="container" <%- body %>>
+
+## Creating NavBar
+
+
 ## Add-on Concepts
 
 - The JavaScript ternary operator (also called the conditional operator) is a concise, three-part shorthand used to write simple if...else statements. It evaluates a condition and returns one value if that condition is true, and another if it is false.
