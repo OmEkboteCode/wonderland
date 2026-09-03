@@ -75,6 +75,8 @@ ex: num.toLocalString("en-US")
 
 ## Creating NavBar
 
+- Use bootstrap navbars
+
 
 ## Add-on Concepts
 
