@@ -111,8 +111,17 @@ add-btn {
 }
 
 
-/* Edit Page */
+/* Show Page */
 
-.edit-btn{
-    
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
 }
