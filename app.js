@@ -7,7 +7,7 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
-const { listingSchema } = require("./schema.js");
+const { listingSchema, reviewSchema } = require("./schema.js");
 const Review = require("./models/review.js");
 
 const MONGO_URL = `mongodb://127.0.0.1:27017/wonderland`;
@@ -45,6 +45,19 @@ const validateListing = (req, res, next) => {
     next();
   }
 };
+
+
+const validateReview = (req, res, next) => {
+  let { error } = reviewSchema.validate(req.body);
+  if (error) {
+    let errorMessage = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(400, errorMessage);
+  } else {
+    next();
+  }
+};
+
+
 
 // Index route
 
@@ -122,7 +135,7 @@ app.delete(
 // Reviews
 // Post Route
 
-app.post("/listings/:id/reviews", async (req, res) => {
+app.post("/listings/:id/reviews", validateReview, wrapAsync(async (req, res) => {
   let listing = await Listing.findById(req.params.id);
   let newReview = new Review(req.body.review);
 
@@ -133,7 +146,7 @@ app.post("/listings/:id/reviews", async (req, res) => {
   console.log("New Review Saved");
 
   res.redirect(`/listings/${listing._id}`);
-});
+}));
 
 app.all("/{*splat}", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
