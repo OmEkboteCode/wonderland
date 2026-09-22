@@ -6,10 +6,10 @@ const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
+const session = require("express-session");
 
-
-const listings = require("./routes/listing.js")
-const reviews = require("./routes/review.js")
+const listings = require("./routes/listing.js");
+const reviews = require("./routes/review.js");
 
 const MONGO_URL = `mongodb://127.0.0.1:27017/wonderland`;
 
@@ -32,16 +32,26 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
+const sessionOptions = {
+  secret: "MySecretCode",
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    httpOnly: true,
+  },
+};
+
+app.use(session(sessionOptions));
+
 app.get("/", (req, res) => {
   res.send("Working");
   new Listing();
 });
 
-
-
-app.use("/listings", listings)
-app.use("/listings/:id/reviews", reviews)
-
+app.use("/listings", listings);
+app.use("/listings/:id/reviews", reviews);
 
 app.all("/{*splat}", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
