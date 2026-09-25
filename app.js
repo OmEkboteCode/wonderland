@@ -62,15 +62,15 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.get("/demouser", async (req, res) => {
-  let fakeUser = new User({
-    email: "student@gmail.com",
-    username: "sigma-student",
-  });
+// app.get("/demouser", async (req, res) => {
+//   let fakeUser = new User({
+//     email: "student@gmail.com",
+//     username: "sigma-student",
+//   });
 
-  let registeredUser = await User.register(fakeUser, "Helloworld");
-  res.send(registeredUser)
-});
+//   let registeredUser = await User.register(fakeUser, "Helloworld");
+//   res.send(registeredUser)
+// });
 
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
