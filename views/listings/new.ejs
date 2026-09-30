@@ -4,7 +4,7 @@
     <div class="col-8 offset-2">
     <h2>Create New Listing</h2>
 
-    <form method="POST" action="/listings" novalidate class="needs-validation">
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
 
         <!-- Title -->
         <br>
@@ -41,8 +41,7 @@
             <label for="image" class="form-label">Enter Image URL/Link</label>
             <input
                 name="listing[image]"
-                placeholder="Enter Image URL/Link"
-                type="text"
+                type="file"
                 class="form-control"
                 id="image"
             >
