@@ -1,405 +1,351 @@
 const sampleListings = [
   {
-    title: "Skyline Penthouse in Manhattan",
+    title: "Cozy Beachfront Cottage",
     description:
-      "A sophisticated penthouse with floor-to-ceiling windows, contemporary interiors, and sweeping views of the Manhattan skyline.",
+      "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 420,
-    location: "New York City",
-    country: "United States",
-  },
-
-  {
-    title: "Contemporary Villa with Infinity Pool",
-    description:
-      "A striking modern villa surrounded by greenery, featuring an infinity pool, spacious outdoor areas, and dramatic architectural lines.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1778694276931-056406c4f4d9?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 520,
-    location: "Ubud",
-    country: "Indonesia",
-  },
-
-  {
-    title: "Modern Apartment with City Views",
-    description:
-      "A stylish urban apartment with clean interiors, large windows, and a convenient location close to restaurants, shopping, and nightlife.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1781512436292-f2687f67f605?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 185,
-    location: "Kuala Lumpur",
-    country: "Malaysia",
-  },
-
-  {
-    title: "Minimalist Designer Apartment",
-    description:
-      "A beautifully designed apartment with warm wood, modern furniture, and carefully curated interiors for a calm city stay.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1781249144394-c2b5075ebb10?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 165,
-    location: "Vilnius",
-    country: "Lithuania",
-  },
-
-  {
-    title: "Glass House in the Forest",
-    description:
-      "A secluded contemporary home surrounded by trees, with expansive glass walls that bring the forest directly into the living space.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 310,
-    location: "Catskills",
-    country: "United States",
-  },
-
-  {
-    title: "Luxury Beachfront Villa",
-    description:
-      "An elegant coastal villa steps from the ocean, with bright interiors, a private pool, and generous outdoor living space.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 580,
-    location: "Mallorca",
-    country: "Spain",
-  },
-
-  {
-    title: "Modern Mountain Retreat",
-    description:
-      "A contemporary mountain home combining natural materials, panoramic windows, and peaceful surroundings for a relaxing escape.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 340,
-    location: "Aspen",
-    country: "United States",
-  },
-
-  {
-    title: "Architectural Villa with Private Pool",
-    description:
-      "A bold architectural villa featuring geometric forms, an outdoor pool, and spacious terraces designed for long summer evenings.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 495,
-    location: "Mykonos",
-    country: "Greece",
-  },
-
-  {
-    title: "Luxury Apartment in Downtown Dubai",
-    description:
-      "A polished high-rise apartment with contemporary furnishings, expansive windows, and easy access to Dubai's major attractions.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 290,
-    location: "Dubai",
-    country: "United Arab Emirates",
-  },
-
-  {
-    title: "Cliffside Home Above the Mediterranean",
-    description:
-      "A dramatic coastal retreat perched above the Mediterranean, offering sweeping sea views and a peaceful private terrace.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 460,
-    location: "Santorini",
-    country: "Greece",
-  },
-
-  {
-    title: "Industrial Loft in Chicago",
-    description:
-      "A spacious converted loft with exposed materials, high ceilings, oversized windows, and a distinctly urban character.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 235,
-    location: "Chicago",
-    country: "United States",
-  },
-
-  {
-    title: "Modern Courtyard House",
-    description:
-      "A peaceful contemporary house built around a private courtyard, combining indoor comfort with seamless outdoor living.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 275,
-    location: "Austin",
-    country: "United States",
-  },
-
-  {
-    title: "Luxury Villa in the Tuscan Hills",
-    description:
-      "A refined countryside villa surrounded by rolling hills, featuring elegant interiors, gardens, and relaxing outdoor spaces.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 430,
-    location: "Tuscany",
-    country: "Italy",
-  },
-
-  {
-    title: "Oceanfront House in Malibu",
-    description:
-      "A bright contemporary beach house overlooking the Pacific, with spacious living areas and a terrace made for sunset views.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 650,
+    price: 1500,
     location: "Malibu",
     country: "United States",
   },
-
   {
-    title: "Modern Townhouse in London",
+    title: "Modern Loft in Downtown",
     description:
-      "A sophisticated townhouse blending classic neighborhood character with modern interiors, comfortable bedrooms, and stylish living spaces.",
+      "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 270,
-    location: "London",
-    country: "United Kingdom",
+    price: 1200,
+    location: "New York City",
+    country: "United States",
   },
-
   {
-    title: "Forest Cabin with Panoramic Windows",
+    title: "Mountain Retreat",
     description:
-      "A cozy modern cabin hidden among tall trees, with panoramic windows overlooking the surrounding forest and mountains.",
+      "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
-    price: 245,
-    location: "Whistler",
-    country: "Canada",
+    price: 1000,
+    location: "Aspen",
+    country: "United States",
   },
-
   {
-    title: "Modern Villa on the Amalfi Coast",
+    title: "Historic Villa in Tuscany",
     description:
-      "A sun-filled coastal villa with Mediterranean architecture, a private terrace, and breathtaking views over the sea.",
+      "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
-    price: 540,
-    location: "Amalfi",
+    price: 2500,
+    location: "Florence",
     country: "Italy",
   },
-
   {
-    title: "Designer Apartment in Tokyo",
+    title: "Secluded Treehouse Getaway",
     description:
-      "A compact but sophisticated apartment with minimalist interiors, smart use of space, and easy access to central Tokyo.",
+      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1480796927426-f609979314bd?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 175,
-    location: "Tokyo",
-    country: "Japan",
-  },
-
-  {
-    title: "Private Villa in the Balinese Highlands",
-    description:
-      "A peaceful tropical villa surrounded by lush vegetation, with an open living area and a private pool overlooking the jungle.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 260,
-    location: "Bali",
-    country: "Indonesia",
-  },
-
-  {
-    title: "Contemporary House with Garden",
-    description:
-      "A spacious modern home surrounded by a landscaped garden, featuring large windows and comfortable indoor-outdoor living areas.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 225,
+    price: 800,
     location: "Portland",
     country: "United States",
   },
-
   {
-    title: "High-Rise Residence in Singapore",
+    title: "Beachfront Paradise",
     description:
-      "A sleek city residence in a modern high-rise, offering elegant interiors, impressive views, and convenient access to the city.",
+      "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 240,
-    location: "Singapore",
-    country: "Singapore",
+    price: 2000,
+    location: "Cancun",
+    country: "Mexico",
   },
-
   {
-    title: "Mountain Chalet by the Lake",
+    title: "Rustic Cabin by the Lake",
     description:
-      "A warm wooden chalet near a crystal-clear lake, surrounded by mountains and designed for peaceful weekends in nature.",
+      "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
-    price: 330,
-    location: "Interlaken",
+    price: 900,
+    location: "Lake Tahoe",
+    country: "United States",
+  },
+  {
+    title: "Luxury Penthouse with City Views",
+    description:
+      "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3500,
+    location: "Los Angeles",
+    country: "United States",
+  },
+  {
+    title: "Ski-In/Ski-Out Chalet",
+    description:
+      "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3000,
+    location: "Verbier",
     country: "Switzerland",
   },
-
   {
-    title: "Modern Desert Villa",
+    title: "Safari Lodge in the Serengeti",
     description:
-      "A striking desert retreat with minimalist architecture, wide-open views, and a private outdoor area beneath dramatic skies.",
+      "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
-    price: 285,
-    location: "Joshua Tree",
-    country: "United States",
+    price: 4000,
+    location: "Serengeti National Park",
+    country: "Tanzania",
   },
-
   {
-    title: "Modern Waterfront Home",
+    title: "Historic Canal House",
     description:
-      "A contemporary waterfront residence with expansive glass doors, a private deck, and peaceful views over the surrounding landscape.",
+      "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 295,
-    location: "Seattle",
-    country: "United States",
-  },
-
-  {
-    title: "Luxury Apartment in Barcelona",
-    description:
-      "A bright designer apartment combining contemporary furniture with Mediterranean character, located near Barcelona's best neighborhoods.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 215,
-    location: "Barcelona",
-    country: "Spain",
-  },
-
-  {
-    title: "Modern Hillside Home in Cape Town",
-    description:
-      "A stylish hillside residence with expansive windows, contemporary interiors, and spectacular views across the city and coastline.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 260,
-    location: "Cape Town",
-    country: "South Africa",
-  },
-
-  {
-    title: "Contemporary Apartment in Amsterdam",
-    description:
-      "A refined apartment with modern interiors and large windows, positioned close to canals, cafes, museums, and city attractions.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    },
-    price: 230,
+    price: 1800,
     location: "Amsterdam",
     country: "Netherlands",
   },
-
   {
-    title: "Luxury Coastal Retreat in Maui",
+    title: "Private Island Retreat",
     description:
-      "A relaxed island retreat with bright open interiors, tropical landscaping, and easy access to beaches and coastal trails.",
+      "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1618140052121-39fc6db33972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9kZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 475,
-    location: "Maui",
+    price: 10000,
+    location: "Fiji",
+    country: "Fiji",
+  },
+  {
+    title: "Charming Cottage in the Cotswolds",
+    description:
+      "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhY2glMjB2YWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1200,
+    location: "Cotswolds",
+    country: "United Kingdom",
+  },
+  {
+    title: "Historic Brownstone in Boston",
+    description:
+      "Step back in time in this elegant historic brownstone located in the heart of Boston.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2200,
+    location: "Boston",
     country: "United States",
   },
-
   {
-    title: "Modern Residence in Copenhagen",
+    title: "Beachfront Bungalow in Bali",
     description:
-      "A clean Scandinavian-inspired residence with functional design, warm interiors, and a quiet location close to the city center.",
+      "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1602391833977-358a52198938?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 205,
-    location: "Copenhagen",
-    country: "Denmark",
+    price: 1800,
+    location: "Bali",
+    country: "Indonesia",
   },
-
   {
-    title: "Private Pool Villa in Phuket",
+    title: "Mountain View Cabin in Banff",
     description:
-      "A tropical private villa with a swimming pool, open living spaces, and lush surroundings just minutes from the coast.",
+      "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
-    price: 310,
+    price: 1500,
+    location: "Banff",
+    country: "Canada",
+  },
+  {
+    title: "Art Deco Apartment in Miami",
+    description:
+      "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
+    image: {
+      filename: "listingimage",
+      url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1600,
+    location: "Miami",
+    country: "United States",
+  },
+  {
+    title: "Tropical Villa in Phuket",
+    description:
+      "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1470165301023-58dab8118cc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3000,
     location: "Phuket",
     country: "Thailand",
   },
-
   {
-    title: "Modern Apartment Building Residence",
+    title: "Historic Castle in Scotland",
     description:
-      "A contemporary residence inside a striking modern apartment building, with clean architecture, balconies, and plenty of natural light.",
+      "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1781512436292-f2687f67f605?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1585543805890-6051f7829f98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJlYWNoJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
     },
-    price: 190,
-    location: "Kuala Lumpur",
-    country: "Malaysia",
+    price: 4000,
+    location: "Scottish Highlands",
+    country: "United Kingdom",
+  },
+  {
+    title: "Desert Oasis in Dubai",
+    description:
+      "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 5000,
+    location: "Dubai",
+    country: "United Arab Emirates",
+  },
+  {
+    title: "Rustic Log Cabin in Montana",
+    description:
+      "Unplug and unwind in this cozy log cabin surrounded by the natural beauty of Montana.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1100,
+    location: "Montana",
+    country: "United States",
+  },
+  {
+    title: "Beachfront Villa in Greece",
+    description:
+      "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2500,
+    location: "Mykonos",
+    country: "Greece",
+  },
+  {
+    title: "Eco-Friendly Treehouse Retreat",
+    description:
+      "Stay in an eco-friendly treehouse nestled in the forest. It's the perfect escape for nature lovers.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 750,
+    location: "Costa Rica",
+    country: "Costa Rica",
+  },
+  {
+    title: "Historic Cottage in Charleston",
+    description:
+      "Experience the charm of historic Charleston in this beautifully restored cottage with a private garden.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1600,
+    location: "Charleston",
+    country: "United States",
+  },
+  {
+    title: "Modern Apartment in Tokyo",
+    description:
+      "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRva3lvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2000,
+    location: "Tokyo",
+    country: "Japan",
+  },
+  {
+    title: "Lakefront Cabin in New Hampshire",
+    description:
+      "Spend your days by the lake in this cozy cabin in the scenic White Mountains of New Hampshire.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1200,
+    location: "New Hampshire",
+    country: "United States",
+  },
+  {
+    title: "Luxury Villa in the Maldives",
+    description:
+      "Indulge in luxury in this overwater villa in the Maldives with stunning views of the Indian Ocean.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 6000,
+    location: "Maldives",
+    country: "Maldives",
+  },
+  {
+    title: "Ski Chalet in Aspen",
+    description:
+      "Hit the slopes in style with this luxurious ski chalet in the world-famous Aspen ski resort.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4000,
+    location: "Aspen",
+    country: "United States",
+  },
+  {
+    title: "Secluded Beach House in Costa Rica",
+    description:
+      "Escape to a secluded beach house on the Pacific coast of Costa Rica. Surf, relax, and unwind.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1800,
+    location: "Costa Rica",
+    country: "Costa Rica",
   },
 ];
 
