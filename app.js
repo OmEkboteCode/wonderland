@@ -51,10 +51,10 @@ const sessionOptions = {
   },
 };
 
-app.get("/", (req, res) => {
-  res.send("Working");
-  new Listing();
-});
+// app.get("/", (req, res) => {
+//   res.send("Working");
+//   new Listing();
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
