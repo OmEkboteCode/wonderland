@@ -56,7 +56,7 @@ const sampleListings = [
   {
     title: "Parisian Apartment",
     description:
-      "Elegant apartment in the heart of Paris with classic architecture and city views.",
+      "An elegant apartment in the heart of Paris with classic architecture and beautiful city views.",
     image: {
       filename: "listing-image",
       url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
@@ -74,7 +74,7 @@ const sampleListings = [
   {
     title: "Santorini Cliff House",
     description:
-      "A beautiful whitewashed home overlooking the Aegean Sea with a spectacular sunset view.",
+      "A beautiful whitewashed home overlooking the Aegean Sea with spectacular sunset views.",
     image: {
       filename: "listing-image",
       url: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
@@ -138,7 +138,7 @@ const sampleListings = [
     country: "Italy",
     geometry: {
       type: "Point",
-      coordinates: [14.6029, 40.6340],
+      coordinates: [14.6029, 40.634],
     },
     categories: "Trending",
   },
